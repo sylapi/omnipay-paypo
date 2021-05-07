@@ -6,6 +6,8 @@ use Omnipay\Tests\TestCase;
 
 class FetchTransactionTest extends TestCase
 {
+    protected $request;
+
     public function setUp()
     {
         $this->request = new FetchTransactionRequest($this->getHttpClient(), $this->getHttpRequest());

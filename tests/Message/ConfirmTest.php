@@ -6,6 +6,8 @@ use Omnipay\Tests\TestCase;
 
 class ConfirmTest extends TestCase
 {
+    protected $request;
+
     public function setUp()
     {
         $this->request = new ConfirmRequest($this->getHttpClient(), $this->getHttpRequest());

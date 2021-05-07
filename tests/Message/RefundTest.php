@@ -6,6 +6,8 @@ use Omnipay\Tests\TestCase;
 
 class RefundTest extends TestCase
 {
+    protected $request;
+    
     public function setUp()
     {
         $this->request = new RefundRequest($this->getHttpClient(), $this->getHttpRequest());
