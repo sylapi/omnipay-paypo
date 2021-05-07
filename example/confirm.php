@@ -7,6 +7,7 @@ use Omnipay\Omnipay;
 $gateway = Omnipay::create('PayPo');
 $gateway->setPosId('posId');
 $gateway->setClientSecret('clientSecret');
+$gateway->setTestMode(true);
 
 
 $transactionId = 'c0286d15-5e12-43d0-93d9-93057ff4cf36';

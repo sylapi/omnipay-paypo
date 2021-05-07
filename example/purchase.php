@@ -9,6 +9,7 @@ use Omnipay\PayPo\Enums\ShipmentType;
 $gateway = Omnipay::create('PayPo');
 $gateway->setPosId('posId');
 $gateway->setClientSecret('clientSecret');
+$gateway->setTestMode(true);
 
 $response = $gateway->purchase([
     'amount' => '249.00', // 10.00 - 1000.00

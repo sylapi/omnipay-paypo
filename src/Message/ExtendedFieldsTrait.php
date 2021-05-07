@@ -128,11 +128,11 @@ trait ExtendedFieldsTrait {
     }
 
     public function getApiUrl()
-    {
+    {        
         if ($this->getTestMode()) {
             return 'https://api.sandbox.paypo.pl/v3';
         } else {
-            return 'https://api.sandbox.paypo.pl/v3';
+            return 'https://api.paypo.pl/v3';
         }
     }
 

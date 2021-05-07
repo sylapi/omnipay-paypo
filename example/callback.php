@@ -7,6 +7,7 @@ use Omnipay\Omnipay;
 $gateway = Omnipay::create('PayPo');
 $gateway->setPosId('posId');
 $gateway->setClientSecret('clientSecret');
+$gateway->setTestMode(true);
 
 try{
     $response = $gateway->acceptNotification();
