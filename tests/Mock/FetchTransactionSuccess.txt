@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK 
+Server: nginx 
+Date: Wed, 24 Jul 2013 07:14:02 GMT 
+Content-Type: application/json;charset=utf-8 
+Content-Length: 1092 
+Connection: keep-alive 
+Access-Control-Allow-Credentials: true 
+Access-Control-Max-Age: 300 
+Cache-Control: no-cache, no-store 
+
+{
+   "merchantId":"11111111-2222-3333-4444-555555555555",
+   "referenceId":"ord_5985",
+   "transactionId":"c0286d15-5e12-43d0-93d9-93057ff4cf36",
+   "transactionStatus":"COMPLETED",
+   "amount":24900,
+   "settlementStatus":"CONFIRMED",
+   "lastUpdate":"2021-05-07T11:50:41+02:00"
+}

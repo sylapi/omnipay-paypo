@@ -9,8 +9,12 @@ use Omnipay\Common;
 class Item
 {
 
-    public static function toArray(Common\ItemBag $items, $message = '')
+    public static function toArray(?Common\ItemBag $items, $message = '')
     {
+        if($items === null) {
+            return [];
+        }
+
         $it = $items->getIterator();
 
         $fItems = [];
@@ -30,9 +34,12 @@ class Item
         return $fItems;
     }
 
-    public static function toFlatArray(Common\ItemBag $items, $message = '')
+    public static function toFlatArray(?Common\ItemBag $items, $message = '')
     {
-
+        if($items === null) {
+            return [];
+        }
+        
         $it = $items->getIterator();
 
         $fItems = [];

@@ -8,14 +8,8 @@ use Omnipay\Common\Message\RedirectResponseInterface;
 
 class PurchaseResponse extends AbstractResponse implements RedirectResponseInterface
 {
-
-    const DEFAULT_MESSAGE = 'Something went wrong.';
-
-    private $message;
-    private $code;
-    
     public function isSuccessful()
-    {   
+    {
         return $this->isSuccessfulResponse();
     }
 
@@ -37,15 +31,5 @@ class PurchaseResponse extends AbstractResponse implements RedirectResponseInter
     public function getRedirectData()
     {
         return $this->data;
-    }
-
-    public function getMessage()
-    {
-        return $this->message;
-    }
-
-    public function getCode()
-    {
-        return $this->code;
     }
 }

@@ -12,7 +12,7 @@ abstract class AbstractResponse extends \Omnipay\Common\Message\AbstractResponse
 
     public function isSuccessfulResponse()
     {
-        $success = !(isset($this->data['code']) && $this->data['code'] > 299); 
+        $success = !(isset($this->data['code']) && $this->data['code'] >= 300); 
 
         if($success === false)
         {
