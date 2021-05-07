@@ -1,0 +1,22 @@
+{
+    "name": "sylapi/omnipay-paypo",
+    "description": "PayPo gateway for Omnipay payment processing library",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "league/omnipay": "^3"
+    },
+    "require-dev": {
+      "omnipay/tests": "^3",
+        "phpstan/phpstan": "^0.12.85"
+    },
+    "autoload": {
+      "psr-4": {
+        "Omnipay\\PayPo\\": "src"
+      }
+    },
+    "scripts": {
+      "phpstan": "vendor/bin/phpstan",
+      "tests": "vendor/bin/phpunit tests"
+    }     
+}
