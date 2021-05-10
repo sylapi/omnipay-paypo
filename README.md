@@ -1,5 +1,7 @@
 # Omnipay: PayPo
 
+![PHPStan](https://img.shields.io/badge/PHPStan-level%205-brightgreen.svg?style=flat) [![Build](https://github.com/sylapi/omnipay-paypo/actions/workflows/build.yaml/badge.svg?event=push)](https://github.com/sylapi/omnipay-paypo/actions/workflows/build.yaml) [![codecov.io](https://codecov.io/github/sylapi/omnipay-paypo/coverage.svg)](https://codecov.io/github/sylapi/omnipay-paypo/)
+
 ## Basic purchase example
 
 ```php
