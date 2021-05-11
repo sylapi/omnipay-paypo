@@ -62,7 +62,6 @@ class Gateway extends AbstractGateway
 
     public function completeAuthorize(array $options = array())
     {
-        // TODO: Implement completeAuthorize() method.
         throw new BadMethodCallException('The gateway does not support this feature.');
     }
 
@@ -112,7 +111,6 @@ class Gateway extends AbstractGateway
 
     public function capture(array $options = array())
     {
-        // TODO: Implement capture() method.
         throw new BadMethodCallException('The gateway does not support this feature.');
     }
 

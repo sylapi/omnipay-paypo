@@ -29,7 +29,7 @@ class ConfirmRequest extends AbstractRequest
 
             $response = json_decode($result->getBody(), true);
             $this->response = $response;
-            return new VoidResponse($this, $response);
+            return new ConfirmResponse($this, $response);
         } catch (Exception $exception) {
             throw new Exception($exception->getMessage(), $exception->getCode());
         }
