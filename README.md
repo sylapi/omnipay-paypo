@@ -9,11 +9,6 @@ $gateway = Omnipay::create('PayPo');
 $gateway->setPosId('posId');
 $gateway->setClientSecret('clientSecret');
 
-
-$returnUrl = "http://localhost/omnipay-paypo/example/success.php";
-$cancelUrl = "http://localhost/omnipay-paypo/example/error.php";
-$notifyUrl = "http://localhost/omnipay-paypo/example/callback.php";
-
 $response = $gateway->purchase([
     'amount' => '249.00', // min. 10.00 - max. 1000.00
     'currency' => 'PLN',

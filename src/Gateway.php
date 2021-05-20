@@ -14,9 +14,7 @@ use Omnipay\PayPo\Message\CompletePurchaseRequest;
 use Omnipay\PayPo\Message\FetchTransactionRequest;
 use Omnipay\PayPo\Message\Notification;
 
-/**
- * Class Gateway.
- */
+
 class Gateway extends AbstractGateway
 {
     use ExtendedFieldsTrait;
@@ -60,26 +58,6 @@ class Gateway extends AbstractGateway
         return $this->createRequest(AuthorizeRequest::class, $options);
     }
 
-    public function completeAuthorize(array $options = array())
-    {
-        throw new BadMethodCallException('The gateway does not support this feature.');
-    }
-
-    public function createCard(array $options = array())
-    {
-        throw new BadMethodCallException('The gateway does not support this feature.');
-    }
-
-    public function updateCard(array $options = array())
-    {
-        throw new BadMethodCallException('The gateway does not support this feature.');
-    }
-
-    public function deleteCard(array $options = array())
-    {
-        throw new BadMethodCallException('The gateway does not support this feature.');
-    }
-
     public function fetchTransaction(array $options = [])
     {
         $this->setToken($this->authorize($options)->send()->getAccessToken());
@@ -108,10 +86,4 @@ class Gateway extends AbstractGateway
         $this->setToken($this->authorize($options)->send()->getAccessToken());
         return parent::createRequest(VoidRequest::class, $options);
     }
-
-    public function capture(array $options = array())
-    {
-        throw new BadMethodCallException('The gateway does not support this feature.');
-    }
-
 }
