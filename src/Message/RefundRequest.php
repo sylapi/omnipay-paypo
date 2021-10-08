@@ -38,7 +38,7 @@ class RefundRequest extends AbstractRequest
     public function getData()
     {
         return [
-            'amount' =>  ((float) $this->getAmount() * 100),
+            'amount' =>  (int) round($this->getAmount() * 100),
         ];
     }
 

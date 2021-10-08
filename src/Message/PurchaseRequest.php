@@ -43,7 +43,7 @@ class PurchaseRequest extends AbstractRequest
             'shopId' => $this->getShopId(),
             'order' => [
                 'referenceId' => $this->getTransactionReference(),
-                'amount' => ((float) $this->getAmount() * 100),
+                'amount' => (int) round($this->getAmount() * 100),
                 'description' => $this->getDescription(),
                 'additionalInfo' => Helpers\Item::toArray($this->getItems()),
                 'shipment' => $this->getShipment(),
@@ -63,7 +63,7 @@ class PurchaseRequest extends AbstractRequest
             ]            
 
         ];
-
+        
         return $data;
     }
 }
